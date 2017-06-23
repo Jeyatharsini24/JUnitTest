@@ -20,4 +20,11 @@ public class NonGUI {
 	{
 		data.setWorkDone(true);
 	}
+	
+	protected ComplexData callByAMockedClassMethodWithReturnTypeShouldBeOneOfTheArgument(String s, int n)
+	{
+		ComplexData d = data.getWorkDone(new ComplexData("1", 1), s, n);
+		d.setN(3);
+		return d;
+	}
 }
